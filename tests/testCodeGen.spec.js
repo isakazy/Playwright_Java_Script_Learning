@@ -47,6 +47,8 @@ test("checkout test", async({page}) => {
      await page.locator("//input[@id='login-button']").click(); 
      
      const expectedUrl = "https://www.saucedemo.com/inventory.html"; 
+
+     await expect(page).toHaveTitle("Swag Labs"); 
      
      await expect(page).toHaveURL(expectedUrl); 
      

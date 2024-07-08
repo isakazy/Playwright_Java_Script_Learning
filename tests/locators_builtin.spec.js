@@ -12,7 +12,7 @@ import {test, expect} from "@playwright/test";
 test("builtInLocators",async ({page}) => {
 
 await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"); 
-let image = await page.getByAltText("company-branding"); // locating image by altText 
+let image = page.getByAltText("company-branding"); // locating image by altText 
 await expect(image).toBeVisible(); // assert if the text isVisible 
 page.close(); 
 })
